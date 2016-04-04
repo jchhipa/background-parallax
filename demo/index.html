@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Background Parallax</title>
+</head>
+
+<style>
+	.parallax {
+		margin-top: 450px;
+		background-image: url("img/mountains.jpg");
+		background-size: cover;
+		padding: 75px 0 85px;
+		margin-bottom: 500px;
+	}
+	.demo-header {
+		font-size: 34px;
+	}
+	.demo-content {
+		font-size: 18px;
+		line-height: 28px;
+	}
+	.demo-header, .demo-content {
+		color: #fff;
+		text-align: center;
+		max-width: 500px;
+		margin: 35px auto;
+	}
+</style>
+<body>
+	<div class="parallax">
+		<div class="demo-header">Lorem ipsum dolor sit amet, consectetur.</div>
+		<div class="demo-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quasi nisi totam dolorum itaque reiciendis quo, qui veniam quas, accusantium fuga. Repudiandae laboriosam tempora animi consequatur dolor vel quos, corporis possimus dolore delectus accusamus excepturi nulla magni vitae assumenda, ex placeat distinctio aperiam explicabo libero voluptatem non adipisci et! Eius quidem et, aliquid accusantium voluptatum sed quasi dolorem sapiente quo!</div>
+	</div>
+
+	<script src="../background-parallax.js"></script>
+
+	<script>
+		elements = document.querySelectorAll(".parallax");
+		window.addEventListener("scroll", function() {
+			Array.prototype.forEach.call(elements, function(el, i){
+				background_parallax(el, 2.5)
+			});
+		});
+	</script>
+</body>
+</html>
