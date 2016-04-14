@@ -6,6 +6,9 @@ var background_parallax = function(el, speed) {
 
 	if(speed <= 0) return;
 	
-	var yPos = speed * ((scrollY - elHeight) / (elHeight / (elHeight/10)));
-	el.style["background-position"] = "0px" + " " + yPos + "px";
+	var offset = speed * ((scrollY - elHeight) / 10);
+	if(offset > 0) {
+		offset = 0;
+	}
+	el.style["background-position"] = "center" + " " + offset + "px";
 }
